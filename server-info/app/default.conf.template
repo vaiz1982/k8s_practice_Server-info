@@ -1,0 +1,24 @@
+server {
+    listen       80;
+    server_name  _;
+    root         /usr/share/nginx/html;
+    index        index.html;
+
+    # переменные окружения (из ConfigMap) прокидываем в SSI через set
+    set $app_name    "${APP_NAME}";
+    set $app_version "${APP_VERSION}";
+    set $app_env     "${APP_ENV}";
+
+    # включаем SSI
+    ssi          on;
+    ssi_types    text/html;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+
+    location /healthz {
+        return 200 "ok\n";
+        add_header Content-Type text/plain;
+    }
+}

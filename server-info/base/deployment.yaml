@@ -1,0 +1,60 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: server-info
+  labels:
+    app: server-info
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: server-info
+  template:
+    metadata:
+      labels:
+        app: server-info
+    spec:
+      containers:
+        - name: server-info
+          image: vaiz82/server-info:1.0.0   # замените на свой образ
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80
+              name: http
+          envFrom:
+            - configMapRef:
+                name: server-info-config
+          readinessProbe:
+            httpGet:
+              path: /healthz
+              port: 80
+            initialDelaySeconds: 3
+            periodSeconds: 5
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: 80
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          resources:
+            requests:
+              cpu: 50m
+              memory: 32Mi
+            limits:
+              cpu: 200m
+              memory: 64Mi
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: server-info
+  labels:
+    app: server-info
+spec:
+  selector:
+    app: server-info
+  ports:
+    - name: http
+      port: 80
+      targetPort: 80
+  type: ClusterIP

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Server Info</title>
+    <style>
+        body { font-family: Arial, sans-serif; background:#1e1e2f; color:#eee; margin:0; padding:40px; }
+        .card { max-width:600px; margin:0 auto; background:#2a2a40; border-radius:10px; padding:30px; box-shadow:0 4px 20px rgba(0,0,0,.4);}
+        h1 { color:#7fd1ff; }
+        table { width:100%; border-collapse:collapse; margin-top:20px; }
+        td { padding:8px 4px; border-bottom:1px solid #444; }
+        td.key { color:#9ad; width:40%; }
+    </style>
+</head>
+<body>
+<div class="card">
+    <h1>Server Info</h1>
+    <table>
+        <tr><td class="key">Hostname (pod)</td><td><!--#echo var="hostname" --></td></tr>
+        <tr><td class="key">Date</td><td><!--#echo var="date_local" --></td></tr>
+        <tr><td class="key">App name</td><td><!--#echo var="app_name" --></td></tr>
+        <tr><td class="key">App version</td><td><!--#echo var="app_version" --></td></tr>
+        <tr><td class="key">Environment</td><td><!--#echo var="app_env" --></td></tr>
+        <tr><td class="key">Remote addr</td><td><!--#echo var="remote_addr" --></td></tr>
+    </table>
+</div>
+</body>
+</html>

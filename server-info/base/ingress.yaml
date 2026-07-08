@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: server-info
+  annotations:
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+spec:
+  ingressClassName: nginx   # укажите ваш ingress-контроллер, если отличается
+  rules:
+    - host: server-info.local   # замените на свой домен / впишите в /etc/hosts для теста
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: server-info
+                port:
+                  number: 80
