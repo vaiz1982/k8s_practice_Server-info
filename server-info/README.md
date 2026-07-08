@@ -338,5 +338,56 @@ kubectl get pods -n prod -l app=server-info
 
 
 
+<img width="1407" height="415" alt="Screenshot 2026-07-08 at 18 31 18" src="https://github.com/user-attachments/assets/8010911a-0ae8-44fb-8426-f7e3cc30a70f" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+<img width="1829" height="1003" alt="Screenshot 2026-07-08 at 18 32 15" src="https://github.com/user-attachments/assets/959bd93e-865e-48d8-8dc0-b82d54d8379e" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<img width="1099" height="144" alt="Screenshot 2026-07-08 at 18 32 28" src="https://github.com/user-attachments/assets/74b32ad1-514c-44ba-ac8c-86381dd23987" />
+
+
+
+
+
+
+
+
+
+
+
+
+argocd own it ?
+
+
+
+<img width="995" height="161" alt="Screenshot 2026-07-08 at 18 33 43" src="https://github.com/user-attachments/assets/fb80db1e-86b6-4386-8ea9-3e862b69c89d" />
+
+
+
 
 
