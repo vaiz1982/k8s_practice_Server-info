@@ -8,7 +8,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/<your-user>/<your-repo>.git
+    repoURL: https://github.com/vaiz1982/k8s_practice_Server-info.git         ##add hre ! 
     targetRevision: main
     path: overlays/prod
   destination:
