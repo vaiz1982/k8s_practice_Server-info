@@ -287,3 +287,56 @@ kubectl get pods -n prod -l app=server-info
 
 
 <img width="1405" height="780" alt="Screenshot 2026-07-08 at 18 06 51" src="https://github.com/user-attachments/assets/69a43947-7743-48d3-ab6d-e213eafc482c" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<img width="1831" height="868" alt="Screenshot 2026-07-08 at 18 23 46" src="https://github.com/user-attachments/assets/62067266-b94f-440e-b153-6fa52eee467c" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<img width="1842" height="688" alt="Screenshot 2026-07-08 at 18 26 09" src="https://github.com/user-attachments/assets/2166d84b-51d4-4516-b4cf-59dd572b622c" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
