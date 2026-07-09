@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: https://github.com/vaiz1982/k8s_practice_Server-info.git                     ##add here! 
     targetRevision: main
-    path: overlays/dev
+    path: server-info/overlays/dev
   destination:
     server: https://kubernetes.default.svc
     namespace: dev

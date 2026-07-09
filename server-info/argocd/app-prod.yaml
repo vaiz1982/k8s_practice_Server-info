@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: https://github.com/vaiz1982/k8s_practice_Server-info.git         ##add hre ! 
     targetRevision: main
-    path: overlays/prod
+    path: server-info/overlays/prod
   destination:
     server: https://kubernetes.default.svc
     namespace: prod
